@@ -12,6 +12,10 @@ const app = express();
 // express.json() is used for Converting a data in JSON format.
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+    res.send("Home Page");
+})
+
 // Logger Middleware is applicable to all the below Routes. 
 app.use(logger);
 app.use("/user",User);
